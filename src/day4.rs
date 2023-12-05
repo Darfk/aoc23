@@ -74,11 +74,9 @@ pub fn part2(input: String) -> u32 {
         for copy_index in index + 1..copies.len().min(index + 1 + card as usize) {
             copies[copy_index].1 += amount;
         }
-
-        
     }
 
-    dbg!(&copies);
+    // dbg!(&copies);
 
     return copies.iter().map(|copy| copy.1).sum();
 }
